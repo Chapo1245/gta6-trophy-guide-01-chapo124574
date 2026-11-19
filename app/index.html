@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Ledger — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: checklist, roadmap to the platinum, missable flags, and a cited guide for every trophy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Offline guide</p>
+    <h1>Leonida Ledger</h1>
+    <p class="tagline">Every trophy, tracked. Every guide, sourced. One road to the platinum.</p>
+    <div class="counts" id="counts">
+      <span class="count"><strong>55</strong> trophies</span>
+      <span class="count count-platinum"><strong>1</strong> Platinum</span>
+      <span class="count count-gold"><strong>2</strong> Gold</span>
+      <span class="count count-silver"><strong>6</strong> Silver</span>
+      <span class="count count-bronze"><strong>46</strong> Bronze</span>
+      <span class="count"><strong>28</strong> hidden</span>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-line"><span id="progress-text">0 / 55 earned</span><span id="progress-pct">0%</span></div>
+      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+      <p class="progress-note" id="progress-note">Tick a trophy when you earn it — progress is saved in this browser.</p>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <button class="tab is-active" data-tab="tracker" type="button">Tracker</button>
+  <button class="tab" data-tab="roadmap" type="button">Roadmap to Platinum</button>
+  <button class="tab" data-tab="missables" type="button">Missables &amp; Saves</button>
+  <button class="tab" data-tab="sources" type="button">Sources &amp; Method</button>
+</nav>
+
+<main>
+  <section id="tab-tracker" class="tab-panel is-active" aria-label="Trophy tracker">
+    <div class="toolbar">
+      <label class="search"><span class="visually-hidden">Search trophies</span><input id="search" type="search" placeholder="Search a trophy or its guide…" autocomplete="off"></label>
+      <div class="chips" id="kind-chips" role="group" aria-label="Filter by kind">
+        <button class="chip is-active" data-kind="all" type="button">All 55</button>
+        <button class="chip" data-kind="story" type="button">Story</button>
+        <button class="chip" data-kind="missable" type="button">Missable</button>
+        <button class="chip" data-kind="collectible" type="button">Collectibles</button>
+        <button class="chip" data-kind="activity" type="button">Activities</button>
+      </div>
+      <label class="grade-filter">Grade
+        <select id="grade-filter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="spoiler-toggle"><input id="spoiler" type="checkbox"> <span>Hide story spoilers</span></label>
+      <div class="io-buttons">
+        <button id="export-btn" type="button">Export progress</button>
+        <button id="import-btn" type="button">Import progress</button>
+        <input id="import-file" type="file" accept="application/json,.json" hidden>
+        <button id="reset-btn" type="button">Reset</button>
+      </div>
+    </div>
+    <p class="list-meta" id="list-meta">Showing all 55 trophies.</p>
+    <div class="tracker-grid">
+      <ol class="trophy-list" id="trophy-list"></ol>
+      <aside class="detail" id="detail" aria-live="polite"></aside>
+    </div>
+    <p class="empty" id="empty-state" hidden>No trophies match this filter. Try clearing the search or picking another kind.</p>
+  </section>
+
+  <section id="tab-roadmap" class="tab-panel" aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the platinum</h2>
+    <p class="lede">One playthrough is enough — PowerPyx rates the platinum about 4/10 and roughly 200 hours, long rather than hard. Work the five stages in order; the gold for 100% completion is the last thing to chase, not the first.</p>
+    <ol class="roadmap" id="roadmap"></ol>
+    <aside class="callout">
+      <h3>Before you start: the save rule</h3>
+      <p>GTA VI has <strong>no mission replay</strong> and no New Game Plus (PowerPyx; Output Lag). Keep a <strong>manual save at the start of every chapter</strong> and one before the final mission. That single habit is what makes the one missable trophy safe.</p>
+    </aside>
+  </section>
+
+  <section id="tab-missables" class="tab-panel" aria-label="Missable trophies">
+    <h2>Missables &amp; saves</h2>
+    <p class="lede">Built from the official descriptions and the launch guides that checked them: only one trophy on this list can actually be missed. Everything else is either automatic story progress or free-roam content you can return to.</p>
+    <div id="missable-list"></div>
+    <h3>Story trophies are not missable — but they are one-shot</h3>
+    <p>Every chapter and named-mission trophy unlocks automatically when you finish that mission, and PowerPyx lists them as unmissable. The catch is the missing replay feature: if you want to redo a mission, only a manual save lets you. That is why the roadmap asks for a save at each chapter start, not because the trophies themselves can be missed.</p>
+    <h3>Save plan</h3>
+    <ul class="save-plan">
+      <li><strong>Start of Chapter 1</strong> — before anything else; the Chapter 1 meditation lives here.</li>
+      <li><strong>Start of Chapters 2, 3 and 4</strong> — one save each, kept separate.</li>
+      <li><strong>Before the final mission</strong> — a spare save at the point of no return.</li>
+      <li><strong>After the finale</strong> — a clean post-story save for the collectible and activity stages.</li>
+    </ul>
+  </section>
+
+  <section id="tab-sources" class="tab-panel" aria-label="Sources and method">
+    <h2>Sources &amp; method</h2>
+    <p class="lede">Names, descriptions and grades are the official PlayStation list, as published by Exophase and PSNProfiles and checked against each other before this guide was written. Counts (such as 250 stunts or 18 meditation spots) are PSN's tracked progress targets from PSNProfiles.</p>
+    <ul class="source-list" id="source-list"></ul>
+    <h3>How the guides were written</h3>
+    <p>Each guide is written in this guide's own words. Where a method was confirmed by a launch guide, the guide says so and names it; where launch guides had <em>not</em> confirmed a method (five trophies at launch, per PowerPyx), the guide says so plainly instead of inventing a location or a step. A guide that only repeats the trophy's description earns nothing — every entry here adds what to do, where, and when it can be missed, with its source beside it.</p>
+    <h3>What this guide is not</h3>
+    <p>It uses no Rockstar logo, artwork or game screenshots, and it fetches nothing from the network: every file it needs ships with it, so it works with the network off. It is an independent fan guide, not affiliated with Rockstar Games, PlayStation, Exophase, PSNProfiles or PowerPyx.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Ledger — an offline, open-source GTA VI trophy guide &amp; tracker. Data checked 19 November 2026. Built for the make.fun “Build the best GTA 6 trophy guide” bounty.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
